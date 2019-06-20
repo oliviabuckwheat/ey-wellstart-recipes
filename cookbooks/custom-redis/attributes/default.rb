@@ -39,16 +39,16 @@ default['redis'].tap do |redis|
 
   # Run Redis on a named util instance
   # This is the default
-  #redis['utility_name'] = 'redis'
-  #redis_instances << redis['utility_name']
-  #redis['is_redis_instance'] = (
-  #  node['dna']['instance_role'] == 'util' &&
-  #  redis_instances.include?(node['dna']['name'])
-  #)
+  redis['utility_name'] = 'es_red_bw'
+  redis_instances << redis['utility_name']
+  redis['is_redis_instance'] = (
+    node['dna']['instance_role'] == 'util' &&
+    redis_instances.include?(node['dna']['name'])
+  )
 
   # Run redis on a solo instance
   # Not recommended for production environments
-  redis['is_redis_instance'] = (node['dna']['instance_role'] == 'solo')
+  #redis['is_redis_instance'] = (node['dna']['instance_role'] == 'solo')
 
   # Log level options:
   # - debug
