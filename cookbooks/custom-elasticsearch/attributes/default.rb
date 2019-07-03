@@ -17,18 +17,18 @@ default['elasticsearch'].tap do |elasticsearch|
   # Elasticsearch version to install
   # Go to https://www.elastic.co/downloads/past-releases to see the available version
   #elasticsearch['version'] = '5.5.0'
-  elasticsearch['version'] = '2.4.4'
+  elasticsearch['version'] = '6.2.3'
   # This is the SHA256 checksum. Note that this is different from the SHA1 checksum in the Elastic website
   # To generate the SHA256 checksum, download the file and then run:
   # - Linux: sha256sum <zipfile>
   # - OSX: shasum -a 256 <zipfile>
-  #elasticsearch['checksum'] = '02d9b16334ca97eaaab308bb65743ba18249295d4414f6967c2daf13663cf01d'   # checksum for 5.5.0
-  elasticsearch['checksum'] = 'bee3ca3d5b2103e09b18e1791d1cc504388b992cc4ebf74869568db13c3d4372'  # checksum for 2.4.4
+  elasticsearch['checksum'] = '2560c1fdcaad5757ece731c268e3441aeef17712174cb3be9ece620ca9df845e' # checksum for 6.2.3
+  #elasticsearch['checksum'] = 'bee3ca3d5b2103e09b18e1791d1cc504388b992cc4ebf74869568db13c3d4372'  # checksum for 2.4.4
 
   # Use this URL for the 5.x.x versions
-  #elasticsearch['download_url'] = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-#{elasticsearch['version']}.zip"
+  elasticsearch['download_url'] = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-#{elasticsearch['version']}.zip"
   # Use this URL for the 2.4.x versions
-  elasticsearch['download_url'] = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/#{elasticsearch['version']}/elasticsearch-#{elasticsearch['version']}.zip"
+  #elasticsearch['download_url'] = "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/#{elasticsearch['version']}/elasticsearch-#{elasticsearch['version']}.zip"
 
   # Gentoo Java package name to use
   elasticsearch['java_package_name'] = 'dev-java/icedtea-bin'
