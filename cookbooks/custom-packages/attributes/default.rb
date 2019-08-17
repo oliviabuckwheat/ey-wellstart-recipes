@@ -7,6 +7,6 @@
 # Examples below:
 default['packages'].tap do |packages|
   packages['install'] = [
-    {'name' => "media-gfx/wkhtmltopdf-bin", 'version' => "0.12.5"}
+    {'name' => "media-gfx/wkhtmltopdf", 'version' => "0.12.5"}
   ]
 end
